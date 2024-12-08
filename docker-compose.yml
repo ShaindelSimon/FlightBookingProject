@@ -5,7 +5,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     ports:
-      - "5001:5001"
+      - "5002:5002"
     depends_on:
       database:
         condition: service_healthy # תלות בבריאות מסד הנתונים

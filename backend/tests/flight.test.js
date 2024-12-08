@@ -43,7 +43,7 @@ describe('Flight Booking API Tests', () => {
   describe('GET /flights/search', () => {
     it('should return a list of flights matching search criteria', async () => {
       const response = await request(`http://localhost:${PORT}`).get('/flights/search?from=New York&to=Los Angeles');
-      expect(response.status).toBe(6);
+      expect(response.status).toBe(200);
       expect(response.body).toBeInstanceOf(Array);
       expect(response.body.length).toBeGreaterThan(0);
     });
